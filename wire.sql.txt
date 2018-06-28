@@ -1,0 +1,42 @@
+CREATE TABLE
+    wi
+    (
+        id BIGINT NOT NULL,
+        id_aba VARCHAR,
+        name_finl_insttn_tlgrpc_abrvtn VARCHAR,
+        id_bnfcry_acct VARCHAR,
+        name_bnfcry VARCHAR,
+        desc_origr_to_bnfcry_info VARCHAR,
+	desc_rcvr_finl_insttn_info VARCHAR,
+	desc_finl_insttn_to_finl_insttn VARCHAR,
+	PRIMARY KEY (id)
+    );
+
+CREATE TABLE
+    hibernate_sequence
+    (
+        next_val BIGINT
+    );
+
+INSERT INTO wi (id, id_aba, name_finl_insttn_tlgrpc_abrvtn, id_bnfcry_acct, name_bnfcry, desc_origr_to_bnfcry_info, desc_rcvr_finl_insttn_info, desc_finl_insttn_to_finl_insttn)
+  VALUES (1, '123', 'NFCU', '1246052722', 'Michael Jordan', 'test', 'test', 'test');
+
+
+
+
+
+INSERT INTO wi (id, id_aba, name_finl_insttn_tlgrpc_abrvtn, id_bnfcry_acct, name_bnfcry, desc_origr_to_bnfcry_info, desc_rcvr_finl_insttn_info, desc_finl_insttn_to_finl_insttn)
+  VALUES (2, '124', 'BOA', '1246052726', 'Larry Bird', 'test', 'test', 'test');
+
+
+
+INSERT INTO wi (id, id_aba, name_finl_insttn_tlgrpc_abrvtn, id_bnfcry_acct, name_bnfcry, desc_origr_to_bnfcry_info, desc_rcvr_finl_insttn_info, desc_finl_insttn_to_finl_insttn)
+  VALUES (3, '124', 'BOA', '1246052727', 'Magic Johnson', 'test', 'test', 'test');
+
+
+
+INSERT INTO hibernate_sequence (next_val) VALUES (3);
+
+
+UPDATE hibernate_sequence
+SET next_val = 5;
